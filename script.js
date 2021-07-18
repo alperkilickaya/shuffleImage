@@ -31,7 +31,7 @@ window.onload = function(){
 }
 
 
-// shuffle'a basıldığında random foto getir.
+// shuffle'a basıldığında random index oluştur.
 shuffle.addEventListener('click',function(){
 
     console.log("Önceki İndex:",prev); // önceki index'i yaz
@@ -51,6 +51,7 @@ shuffle.addEventListener('click',function(){
     prev.push(index);
     console.log(prev); 
     */
+// random index'i foto gösterme fonksiyonuna gönder.
 
     show(index);// index'i resim gösterme fonkiyonuna gönder
     
