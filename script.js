@@ -32,14 +32,15 @@ window.onload = function(){
 
 
 // shuffle'a basıldığında random index oluştur.
+
 shuffle.addEventListener('click',function(){
 
-    console.log("Önceki İndex:",prev); // önceki index'i yaz
+    console.log("Önceki İndex:",prev); // önceki index'i yaz. Kontrol amaçlı
 
     do {
         index = Math.floor(Math.random()*3);//0-2 arası (2 dahil)yeni bir index oluştur.
 
-    }while(prev == index) // önceki index retilen index'e eşit olduğu sürece DO ile index üret
+    }while(prev == index) // önceki index üretilen index'e eşit olduğu sürece DO ile index üret
     console.log("Üretilen index:",index); // üretilen index'i yaz
 
     prev = index; // üretilen index'i karşılaştırma için prev'de sakla.
@@ -51,15 +52,15 @@ shuffle.addEventListener('click',function(){
     prev.push(index);
     console.log(prev); 
     */
+    
 // random index'i foto gösterme fonksiyonuna gönder.
-
     show(index);// index'i resim gösterme fonkiyonuna gönder
     
   
 })
 
 function show(index){
-    //console.log('gelen index', index); gelen index'İ kontrol içindi.
+    console.log('gelen index', index); //gelen index'i kontrol etmek için.
     image.setAttribute('src', `${photos[index].link}`);
     cardTitle.textContent = `${photos[index].title}`;
 
