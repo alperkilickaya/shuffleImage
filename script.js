@@ -56,12 +56,15 @@ shuffle.addEventListener('click',function(){
     */
     
 // random index'i foto gösterme fonksiyonuna gönder.
-    show(index);// index'i resim gösterme fonkiyonuna gönder
+    show(index);
       
 })
 
+// gelen index'e göre foto ve bilgilerini göster.
+
 function show(index){
     console.log('gelen index', index); //gelen index'i kontrol etmek için.
+    
     image.setAttribute('src', `${photos[index].link}`);
     cardTitle.textContent = `${photos[index].title}`;
 
